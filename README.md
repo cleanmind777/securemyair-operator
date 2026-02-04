@@ -22,6 +22,22 @@ node -v
 npm -v
 ```
 
+### Environment variables
+
+Create a `.env` file in the project root (copy from `.env.example` so you don’t commit secrets):
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` and set values as needed. Only variables starting with `REACT_APP_` are exposed to the app.
+
+| Variable | Description |
+|----------|-------------|
+| `REACT_APP_API_URL` | Backend API base URL (e.g. `http://localhost:8000`). No trailing slash. |
+
+The `.env` file is listed in `.gitignore` and should not be committed.
+
 ### Install dependencies
 
 From the project root (`operator` folder), run:
