@@ -9,7 +9,7 @@ import NewPass from './NewPass';
 let theme = createTheme({
   typography: { button: { textTransform: 'none' } },
 });
-export default function MyDialog() {
+export default function ResetPasswordDialog() {
   const [page, setPage] = useState(1);
   const [email, setEmail] = useState();
 

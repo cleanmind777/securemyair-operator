@@ -53,7 +53,6 @@ function Machines() {
   return (
     <div
       style={{
-        height: { xs: "auto", sm: "50%" },
         display: "flex",
         flexDirection: "column",
       }}

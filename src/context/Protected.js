@@ -20,10 +20,10 @@
 import { Navigate } from 'react-router-dom'
 import Layout from '../components/Layout';
 
-const PrivateRoutes = () => {
+const Protected = () => {
   const id = localStorage.getItem("op_id");
-    return id ? <Layout /> : <Navigate to="/login" />;
-}
+  return id ? <Layout /> : <Navigate to="/login" />;
+};
 
-export default PrivateRoutes
+export default Protected;
 
