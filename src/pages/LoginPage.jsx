@@ -120,7 +120,7 @@ function LoginPage() {
                 label='Password'
                 type='password'
                 autoComplete='current-password'
-                helperText={pwdError && 'Password Incorrent'}
+                helperText={pwdError && 'Password Incorrect'}
               />
               <br />
               <Grid container>

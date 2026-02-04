@@ -52,7 +52,7 @@ function Customers() {
   }, [query, customers]);
 
   return (
-    <div style={{ height: { xs: 'auto', sm: '50%' }, display: 'flex', flexDirection: 'column' }}>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
       <div
         style={{
           display: 'flex',

@@ -31,15 +31,15 @@ const OldImg = ({ date }) => {
   const [isAllowed, setAllowed] = useState(true);
   const [dialog, setDialog] = useState({ status: false, msg: '', title: '' });
   const { machineID } = useContext(MachineContext);
-  const [isLoadin, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(false);
   const [url, setUrl] = useState();
-  const cancleToken = axios.CancelToken;
-  const source = cancleToken.source();
+  const cancelToken = axios.CancelToken;
+  const source = cancelToken.source();
   const getImg = async () => {
     setLoading(true);
     await axios
       .get(`filterImg.php?api=${machineID}&name=inspectionPicBefore`, {
-        cancelToken: source.cancelToken,
+        cancelToken: source.token,
       })
       .then(res => {
         setLoading(false);
@@ -123,7 +123,7 @@ const OldImg = ({ date }) => {
           <LinearProgressWithLabel value={progress} />
         </Box>
       )}
-      {isLoadin ? (
+      {isLoading ? (
         <Typography
           sx={{ paddingBlock: 2, color: 'rgba(0,0,0,0.8)', borderTop: '2px solid black' }}>
           Loading...
